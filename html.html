@@ -1,0 +1,75 @@
+<h1 id="myHeader">Hello World!</h1>
+<button onclick="displayResult()">Change text</button>
+
+<script>
+    function displayResult(){
+        document.getElementById("myHeader").innerHTML = "Have a nice day!";
+    }
+</script>
+
+
+
+<button type="button"
+onclick = "document.getElementById('demo').innerHTML = Date()">
+Click me to display Data and Time.</button>
+
+<p id="demo"></p>
+<p id="exe"></p>
+<p id="show"></p>
+
+
+<script>
+    function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
+  
+  // Create 2 Person objects
+  var myFather = new Person("John", "Doe", 50, "blue");
+  var myMother = new Person("Sally", "Rally", 48, "green");
+  
+  // Add a name method to first object
+  myFather.name = function() {
+    return this.firstName + " " + this.lastName;
+  };
+  
+  // Display full name
+  document.getElementById("demo").innerHTML =
+  "My father is " + myFather.name();
+
+
+</script>
+
+
+
+<script>
+    var name = {
+      fullname: function() {
+        return this.firstname + " " + this.lastname;
+      }
+    }
+    var name1 = {
+      firstname:"Maxwell",
+      lastname: "Wang"
+    }
+    var x = name.fullname.apply(name1); 
+    document.getElementById("exe").innerHTML = x; 
+    </script>
+
+
+    <script>
+    var person = {
+      fullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+    var person1 = {
+      firstName:"John",
+      lastName: "mmm"
+    }
+    var x = person.fullName.apply(person1); 
+    document.getElementById("show").innerHTML = x; 
+    </script>
+
